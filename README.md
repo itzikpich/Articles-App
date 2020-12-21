@@ -1,4 +1,4 @@
-# Github jobs Application
+# Globes Articles Application
 this is an application build for Zemingo showing 2 screen using Kotlin with mvvm as architectural design pattern, liveData as the publisher and viewPager2 for showing different data source,
 
 First screen contains my name, the current time, a navigation button and empty TextView that shows the latest pressed item's title from screen two
