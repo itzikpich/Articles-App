@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.findNavController
 import com.itzikpichhadze.zemingoapp.R
 import com.itzikpichhadze.zemingoapp.utilities.replaceFragment
 import com.itzikpichhadze.zemingoapp.view_models.SharedViewModel
@@ -20,7 +21,10 @@ class MainFragment: BaseFragment(R.layout.fragment_main) {
         super.onViewCreated(view, savedInstanceState)
         setViewModels(view)
         view.fragment_main_navigate_button.setOnClickListener {
-            mainActivity.replaceFragment(TabsFragment())
+            MainFragmentDirections.actionMainFragmentToTabsFragment().apply {
+                view.findNavController().navigate(this)
+            }
+//            mainActivity.replaceFragment(TabsFragment())
         }
     }
 
